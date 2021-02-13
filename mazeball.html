@@ -1,84 +1,264 @@
-
-
-
-
 <!DOCTYPE html>
-<html lang="en">
-  
+<html>
   <head>
-    
-      <meta charset="utf-8">
-      <title>Bokeh Plot</title>
-      
-      
-        
-          
-        
-        
-          
-        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
-        <script type="text/javascript">
-            Bokeh.set_log_level("info");
-        </script>
-        
-      
-      
-    
-  </head>
-  
-  
-  <body>
-    
-      
-        
-          
-          
-            
-              <div class="bk-root" id="1c30f3e3-53dd-42e6-96ba-228623b448cb" data-root-id="3146"></div>
-            
-          
-        
-      
-      
-        <script type="application/json" id="3384">
-          {"b267025b-ee00-45c4-b1df-272fec85901b":{"roots":{"references":[{"attributes":{"below":[{"id":"3157","type":"LinearAxis"}],"center":[{"id":"3161","type":"Grid"},{"id":"3166","type":"Grid"}],"left":[{"id":"3162","type":"LinearAxis"}],"plot_height":800,"plot_width":800,"renderers":[{"id":"3172","type":"GlyphRenderer"}],"title":{"id":"3147","type":"Title"},"toolbar":{"id":"3167","type":"Toolbar"},"x_range":{"id":"3149","type":"DataRange1d"},"x_scale":{"id":"3153","type":"LinearScale"},"y_range":{"id":"3151","type":"DataRange1d"},"y_scale":{"id":"3155","type":"LinearScale"}},"id":"3146","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"Number of minority / Number of white students","formatter":{"id":"3274","type":"BasicTickFormatter"},"ticker":{"id":"3163","type":"BasicTicker"}},"id":"3162","type":"LinearAxis"},{"attributes":{"source":{"id":"3144","type":"ColumnDataSource"}},"id":"3173","type":"CDSView"},{"attributes":{},"id":"3277","type":"UnionRenderers"},{"attributes":{},"id":"3153","type":"LinearScale"},{"attributes":{"dimension":1,"ticker":{"id":"3163","type":"BasicTicker"}},"id":"3166","type":"Grid"},{"attributes":{"axis_label":"School Rank (starts at 0)","formatter":{"id":"3276","type":"BasicTickFormatter"},"ticker":{"id":"3158","type":"BasicTicker"}},"id":"3157","type":"LinearAxis"},{"attributes":{"ticker":{"id":"3158","type":"BasicTicker"}},"id":"3161","type":"Grid"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"3145","type":"HoverTool"}]},"id":"3167","type":"Toolbar"},{"attributes":{"text":"CT School Rankings and Minority Students"},"id":"3147","type":"Title"},{"attributes":{"callback":null},"id":"3149","type":"DataRange1d"},{"attributes":{"fill_color":{"field":"colors"},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x"},"y":{"field":"y"}},"id":"3170","type":"Circle"},{"attributes":{"data_source":{"id":"3144","type":"ColumnDataSource"},"glyph":{"id":"3170","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"3171","type":"Circle"},"selection_glyph":null,"view":{"id":"3173","type":"CDSView"}},"id":"3172","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"units":"screen","value":10},"x":{"field":"x"},"y":{"field":"y"}},"id":"3171","type":"Circle"},{"attributes":{},"id":"3158","type":"BasicTicker"},{"attributes":{},"id":"3163","type":"BasicTicker"},{"attributes":{"callback":null},"id":"3151","type":"DataRange1d"},{"attributes":{},"id":"3276","type":"BasicTickFormatter"},{"attributes":{"callback":null,"data":{"colors":["blue","blue","blue","blue","blue","blue","blue","blue","blue","red","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue","blue"],"town":["Westport","New Canaan","Glastonbury","Amity","Darien","Weston","Farmington","Wilton","Fairfield","West Hartford","Ridgefield","Greenwich","Simsbury","Avon","Madison","East Lyme","Cheshire","Monroe","Guilford","South Windsor","Newtown","Trumbull","Old Saybrook","Canton","Pomperaug","North Haven","Rocky Hill","Brookfield","Northwestern","Coventry","Bethel","North Stonington","Stonington","Westbrook","Granby","Suffield","Waterford","East Granby","Litchfield","Wolcott","Tolland","Wethersfield","East Hampton","Cromwell","Berlin","Ellington","Colchester","Clinton","Groton","Branford","Milford","Southington","Windsor","Oxford","Stamford","Portland","Newington","New Fairfield","Middletown","Wallingford","Montville","Seymour","Bristol","Ledyard","Bolton","Plainville","Griswold","Somers","Norwalk","Stafford","Manchester","New Milford","Lebanon","Shelton","East Haddam","East Hartford"],"x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75],"y":{"__ndarray__":"kGqt42GTxT9qZSD87LnAP74JRHmI+tE/AAAAAAAA+H/fngPzWnzAP0EoVtxQL8I/jKNBQ5al2T9KlW5I8zjHP5V2e+5t0Mo/R7851UKc4D/u9fO5f1vEP/IKjPd3lNg/cIeVN/92yD/lmfOORJ7RPxiYlTlEC74/jay6Mi8R0j+GyLq3YcDKP3t0YfptTsM/+TJswuR+wz+stv72wEbbPzmqFYUxMME/CcQ7TwPF1D+jln9DwozDPy/yBbPWCME/AAAAAAAA+H962xqmihvOP75a0iG3YuM/hS1ZnUxkyz8AAAAAAAD4f/FOtIfO7Lw/e3WfMLO00z9eLW7C/K7GP7f+NBxyk8E/EdYLSYiZwj/zlyx/yfK3P/69igjrBME/hEUutkkZzz/wqzGRHqjMPxEIEuxLQLc/xNywPYfGxz/UDBk9tFO9P0g8NWSAxNM/OmfGKuduuz/5XuQ/rCHSP3tW24N3X8Q/2wSYDsgryD/WMyBSXt6+P43AnV/eicc/nomP+24p5D8dehkf/5TQP1XjAQa2cdU/nJ4uhXMgxD9VVVVVVVX+P4bNHp2V1r8/LNBFQaRp9z+QwfkYnI/JP1+XLXqvouA/M6Z8HZZwxD/3YQTPfRjpP0yRz7rBFNU/uhyNy9G43D9CP8tGCrPQP3kN5TWU1+A/7oPSRKWO0z8li6R1fdHIP+cvoL+A/tI/tTX+bh6hyj8avEVsBm+xP329pN6IVvc/L+6k9QOGwD8Xcs7uVyj3Pxhrb+7F2ss/F9AyJ78lwj+SEonQ8w7VPxiGYRiGYbg/waRT8yC3E0A=","dtype":"float64","shape":[76]}},"selected":{"id":"3278","type":"Selection"},"selection_policy":{"id":"3277","type":"UnionRenderers"}},"id":"3144","type":"ColumnDataSource"},{"attributes":{},"id":"3274","type":"BasicTickFormatter"},{"attributes":{"callback":null,"tooltips":[["Rank","$index"],["Town","@town"]]},"id":"3145","type":"HoverTool"},{"attributes":{},"id":"3155","type":"LinearScale"},{"attributes":{},"id":"3278","type":"Selection"}],"root_ids":["3146"]},"title":"Bokeh Application","version":"1.3.4"}}
-        </script>
-        <script type="text/javascript">
-          (function() {
-            var fn = function() {
-              Bokeh.safely(function() {
-                (function(root) {
-                  function embed_document(root) {
-                    
-                  var docs_json = document.getElementById('3384').textContent;
-                  var render_items = [{"docid":"b267025b-ee00-45c4-b1df-272fec85901b","roots":{"3146":"1c30f3e3-53dd-42e6-96ba-228623b448cb"}}];
-                  root.Bokeh.embed.embed_items(docs_json, render_items);
-                
-                  }
-                  if (root.Bokeh !== undefined) {
-                    embed_document(root);
-                  } else {
-                    var attempts = 0;
-                    var timer = setInterval(function(root) {
-                      if (root.Bokeh !== undefined) {
-                        embed_document(root);
-                        clearInterval(timer);
-                      }
-                      attempts++;
-                      if (attempts > 100) {
-                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
-                        clearInterval(timer);
-                      }
-                    }, 10, root)
-                  }
-                })(window);
+    <meta charset="UTF-8">
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        winner = false;
+        grid=[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1],[1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,'G',0,1,0,1,0,1],[1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1],[1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1,0,1,0,1,1,0,1,1,0,1,0,1],[1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,1],[1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1],[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]];
+        class_dict = {1:'wall',0:'ball','G':'goal'};
+        n_grid_x = grid[0].length;
+        n_grid_y = grid.length;
+        cell_x = 10; // In pixels, TODO, make relative to screen size.
+        cell_y = 10;
+
+        grid_div = document.createElement('div');
+        grid_div.className = 'grid_div';
+        grid_div.style.width = n_grid_x * cell_x + 'px';
+        grid_div.style.height = n_grid_y * cell_y + 'px';
+        for(i=0; i<n_grid_x; i++){
+          for(j=0; j<n_grid_y; j++){
+            var cell_div = document.createElement('div');
+            cell_div.className = 'cell';
+            cell_div.id = i.toString() + j.toString();
+            cell_div.style.left = j*cell_x+'px';
+            cell_div.style.top = i*cell_y+'px';
+
+            var ball_div = document.createElement('div');
+            ball_div.className = class_dict[grid[i][j]];
+            ball_div.i = i;
+            ball_div.j = j;
+            cell_div.append(ball_div);
+            grid_div.appendChild(cell_div);
+
+          }
+        }
+
+        document.body.appendChild(grid_div);
+        moves_div = document.createElement('div');
+        moves_div.id = 'moves_div';
+        moves_div.innerHTML = 'Moves: ';
+        moves_span = document.createElement('span');
+        moves_div.appendChild(moves_span);
+        document.body.appendChild(moves_div);
+
+
+        // Route the keypresses.
+        document.addEventListener("keydown", e => {
+          switch (e.keyCode) {
+            case 37: // Left
+              balls = document.getElementsByClassName('ball');
+              Array.from(balls).forEach(function(ball){
+                if(class_dict[grid[ball.i][ball.j-1]] != 'wall'){
+                  ball.j--;
+                  ball.style.transform += 'translateX(-'+cell_x+'px)';
+                }
               });
-            };
-            if (document.readyState != "loading") fn();
-            else document.addEventListener("DOMContentLoaded", fn);
-          })();
-        </script>
-    
+              key_pressed = 'L';
+              break;
+            case 38: // Up
+              balls = document.getElementsByClassName('ball');
+              Array.from(balls).forEach(function(ball){
+                if(class_dict[grid[ball.i-1][ball.j]] != 'wall'){
+                  ball.i--;
+                  ball.style.transform += 'translateY(-'+cell_y+'px)';
+                }
+              });
+              key_pressed = 'U';
+              break;
+            case 39: // Right
+              balls = document.getElementsByClassName('ball');
+              Array.from(balls).forEach(function(ball){
+                if(class_dict[grid[ball.i][ball.j+1]] != 'wall'){
+                  ball.j++;
+                  ball.style.transform += 'translateX('+cell_x+'px)';
+                }
+              });
+              key_pressed = 'R';
+              break;
+            case 40: // Down
+              balls = document.getElementsByClassName('ball');
+              Array.from(balls).forEach(function(ball){
+                if(class_dict[grid[ball.i+1][ball.j]] != 'wall'){
+                  ball.i++;
+                  ball.style.transform += 'translateY('+cell_y+'px)';
+                }
+              });
+              key_pressed = 'D';
+              break;
+            default:
+              return;
+          }
+
+          moves_counter = parseInt(document.getElementById('moves_counter').innerHTML);
+          moves_counter++;
+          document.getElementById('moves_counter').innerHTML = moves_counter;
+
+          // Append to moves list.
+          moves_span.innerHTML += key_pressed;
+
+          // Win condition.
+          if (winner == false){
+            balls = document.getElementsByClassName('ball');
+            winner = true;  // Assume all the balls are on the goal.
+
+            Array.from(balls).forEach(function(ball){
+              if(class_dict[grid[ball.i][ball.j]] != 'goal'){
+                winner = false;
+              }
+            });
+
+            if(winner == true){
+              var win_div = document.createElement('div');
+              win_div.className = 'winner'; // 'ball';
+              // Thanks https://stackoverflow.com/a/6257480/1717828
+              webpage = location.protocol + '//' + location.host + location.pathname;
+              link_url = webpage + "?solution="+moves_span.innerHTML;
+              win_div.innerHTML = 'Winner!  (' + moves_counter + ' moves), <a href="'+link_url+'">Permalink</a>';
+              document.body.insertBefore(win_div, document.body.firstChild);
+            }
+          }
+        });
+
+        // If URL solution exists, play it now.
+        // Thanks https://stackoverflow.com/a/901144/1717828
+        url_params = new URLSearchParams(window.location.search);
+        solution = url_params.get('solution');
+        code_map = {'L':37,'U':38,'R':39,'D':40};
+        if (solution != null){
+          function fire_keypress(i){
+            setTimeout(function(){
+              var kbEvent= document.createEvent("KeyboardEvent");
+              var initMethod = typeof kbEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+
+	      // The following SO comment is a godsend; I couldn't find this
+              // anywhere else on the internet:
+              // https://stackoverflow.com/questions/961532/firing-a-keyboard-event-in-safari-using-javascript#comment44022523_5920206
+              var event = document.createEvent('Event');
+              event.initEvent('keydown', true, true);
+              event.keyCode = code_map[solution[i]];
+
+              document.dispatchEvent(event);
+            }, 25 * (i + 1));
+          }
+
+          for(i = 0; i < solution.length; i++){
+            fire_keypress(i);
+          }
+        }
+
+
+        // Mobile devices
+        // Thanks, https://stackoverflow.com/a/30192291/1717828
+        document.addEventListener('touchstart', handleTouchStart, false);        
+        document.addEventListener('touchmove', handleTouchMove, false);
+        var xDown = null;
+        var yDown = null;
+
+        function handleTouchStart(evt) {
+        xDown = evt.touches[0].clientX;
+        yDown = evt.touches[0].clientY;
+        };
+
+        function handleTouchMove(evt) {
+        if ( ! xDown || ! yDown ) {
+        return;
+        }
+        var xUp = evt.touches[0].clientX;
+        var yUp = evt.touches[0].clientY;
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+
+        if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+                if ( xDiff > 0 ) {
+                    /* left swipe */
+                    var event = document.createEvent('Event');
+                    event.initEvent('keydown', true, true);
+                    event.keyCode = 37;
+                    document.dispatchEvent(event);
+                /* down swipe */
+                } else {
+                    /* right swipe */
+                    var event = document.createEvent('Event');
+                    event.initEvent('keydown', true, true);
+                    event.keyCode = 39;
+                    document.dispatchEvent(event);
+                }
+        } else {
+            if ( yDiff > 0 ) {
+                /* up swipe */
+                    var event = document.createEvent('Event');
+                    event.initEvent('keydown', true, true);
+                    event.keyCode = 38;
+                    document.dispatchEvent(event);
+            } else {
+                /* down swipe */
+                    var event = document.createEvent('Event');
+                    event.initEvent('keydown', true, true);
+                    event.keyCode = 40;
+                    document.dispatchEvent(event);
+            }
+        }
+            /* reset values */
+                xDown = null;
+            yDown = null;
+        };
+      }, false);
+    </script>
+    <style>
+      div.grid_div{
+        display:block;
+        position:relative;
+      }
+      div.cell{
+        position:absolute;
+        height: 10px;
+        width: 10px;
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+      }
+      p{padding-left:60px;}
+      .ball{
+        border-radius:50px;
+        width:10px;
+        height:10px;
+        background:#c00;
+        opacity:0.5;
+        top:0;
+        left:0;
+      }
+      .wall{
+        width:10px;
+        height:10px;
+        background:#000;
+        top:0;
+        left:0;
+      }
+      .goal{
+        width:10px;
+        height:10px;
+        background:#0F0;
+        top:0;
+        left:0;
+      }
+      .winner{
+        background:#0F0;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:40px;
+        font-weight:bold;
+        top:0;
+        left:0;
+      }
+      div#moves_div{
+        word-wrap:break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MazeBall</h1>
+    <p>Use arrow keys to move the red balls.</p>
+    <div id='counter_box'><span id="moves_counter">0</span> moves so far.</div>
   </body>
-  
 </html>
